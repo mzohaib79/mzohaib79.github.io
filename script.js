@@ -191,46 +191,55 @@
     }
   }
 
-  /* ---------- Scrambling tech word ---------- */
+  /* ---------- Text scramble (hero decode and rotating tech word) ---------- */
+  var glyphs = '!<>-_/[]{}=+*^?#';
+
+  function scrambleEl(el, to, onDone) {
+    var from = el.textContent;
+    var length = Math.max(from.length, to.length);
+    var queue = [];
+    for (var i = 0; i < length; i++) {
+      var start = Math.floor(Math.random() * 14);
+      queue.push({ from: from[i] || '', to: to[i] || '', start: start, end: start + 8 + Math.floor(Math.random() * 14), ch: '' });
+    }
+    var frame = 0;
+    (function update() {
+      var out = '';
+      var done = 0;
+      for (var j = 0; j < queue.length; j++) {
+        var q = queue[j];
+        if (frame >= q.end) { done++; out += q.to; }
+        else if (frame >= q.start) {
+          if (!q.ch || Math.random() < 0.3) q.ch = glyphs[Math.floor(Math.random() * glyphs.length)];
+          out += q.ch;
+        } else { out += q.from; }
+      }
+      el.textContent = out;
+      if (done === queue.length) { if (onDone) onDone(); return; }
+      frame++;
+      requestAnimationFrame(update);
+    })();
+  }
+
+  // "Automation" decodes into place after the headline has arrived
+  var posSub = document.querySelector('.pos-sub');
+  if (posSub && !reduceMotion) {
+    var finalText = posSub.textContent;
+    posSub.textContent = finalText.replace(/./g, function () { return glyphs[Math.floor(Math.random() * glyphs.length)]; });
+    setTimeout(function () { scrambleEl(posSub, finalText); }, 1000);
+  }
+
+  // Rotating technology word under the title
   var rotor = document.querySelector('.rotor');
   if (rotor && !reduceMotion) {
     var words = ['Laravel', 'Symfony', 'React', 'Next.js', 'Vue.js', 'React Native', 'TypeScript'];
-    var glyphs = '!<>-_/[]{}=+*^?#';
     var index = 0;
     var scrambling = false;
-
-    var scramble = function (to) {
-      scrambling = true;
-      var from = rotor.textContent;
-      var length = Math.max(from.length, to.length);
-      var queue = [];
-      for (var i = 0; i < length; i++) {
-        var start = Math.floor(Math.random() * 14);
-        queue.push({ from: from[i] || '', to: to[i] || '', start: start, end: start + 8 + Math.floor(Math.random() * 14), ch: '' });
-      }
-      var frame = 0;
-      (function update() {
-        var out = '';
-        var done = 0;
-        for (var j = 0; j < queue.length; j++) {
-          var q = queue[j];
-          if (frame >= q.end) { done++; out += q.to; }
-          else if (frame >= q.start) {
-            if (!q.ch || Math.random() < 0.3) q.ch = glyphs[Math.floor(Math.random() * glyphs.length)];
-            out += q.ch;
-          } else { out += q.from; }
-        }
-        rotor.textContent = out;
-        if (done === queue.length) { scrambling = false; return; }
-        frame++;
-        requestAnimationFrame(update);
-      })();
-    };
-
     setInterval(function () {
       if (scrambling || document.hidden || !heroVisible) return;
       index = (index + 1) % words.length;
-      scramble(words[index]);
+      scrambling = true;
+      scrambleEl(rotor, words[index], function () { scrambling = false; });
     }, 2800);
   }
 
