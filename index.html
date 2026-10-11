@@ -1,13 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muhammad Zohaib – Portfolio</title>
+  <title>Muhammad Zohaib – Software Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Zohaib, a software developer working with PHP and JavaScript.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Muhammad Zohaib</h1>
-  <p>My portfolio is coming soon.</p>
+  <header class="nav">
+    <a class="brand" href="#top">MZ</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Muhammad Zohaib</h1>
+      <p class="lead">Software developer building web applications with PHP and JavaScript.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View my work</a>
+        <a class="btn" href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <!-- TODO: replace with your LinkedIn "About" text -->
+      <p>I'm a software developer who enjoys turning ideas into working, maintainable web applications. I work mainly with PHP and JavaScript and care about clean code and a good user experience.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- TODO: replace with your LinkedIn skills -->
+      <ul class="chips">
+        <li>PHP</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>import-excel</h3>
+          <p>A PHP project for importing data from Excel files.</p>
+          <p class="tags">PHP</p>
+          <a href="https://github.com/mzohaib79/import-excel" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>propay-tech-test</h3>
+          <p>A technical assessment project built with JavaScript.</p>
+          <p class="tags">JavaScript</p>
+          <a href="https://github.com/mzohaib79/propay-tech-test" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>stage-two-screening</h3>
+          <p>A screening task project built with PHP.</p>
+          <p class="tags">PHP</p>
+          <a href="https://github.com/mzohaib79/stage-two-screening" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- TODO: add an Experience / Education section from LinkedIn -->
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Want to work together or just say hello? Reach out on LinkedIn.</p>
+      <a class="btn primary" href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">Message me on LinkedIn</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Muhammad Zohaib</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
