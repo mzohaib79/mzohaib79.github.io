@@ -453,8 +453,39 @@ h3.sub { margin: 72px 0 0; font-size: 1.15rem; }
 }
 
 /* ---------- Education ---------- */
-.edu { padding-top: 16px; border-top: 1px solid var(--border); }
-.edu h3 { margin: 0; font-size: 1.25rem; }
+.edu {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  margin-top: 8px;
+  padding: 28px 32px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 200ms ease-out;
+}
+/* light plate keeps the official navy and gold readable on the dark page */
+.edu-logo {
+  display: grid;
+  place-items: center;
+  width: 124px;
+  height: 124px;
+  padding: 16px;
+  background: #ecebe6;
+  border-radius: 14px;
+  transition: transform 250ms var(--ease-out);
+  will-change: transform;
+}
+.edu-logo img { display: block; width: 100%; height: auto; }
+.edu h3 { margin: 0 0 6px; font-size: clamp(1.25rem, 2.6vw, 1.6rem); letter-spacing: -0.02em; }
+.edu-where { margin: 0 0 20px; color: var(--muted); }
+.edu-meta { margin: 0 0 20px; }
+.edu-meta div { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--border); }
+.edu-meta dt { color: var(--muted); font-size: 0.95rem; }
+.edu-meta dd { margin: 0; }
 
 /* ---------- Contact ---------- */
 #contact { padding-bottom: 112px; }
@@ -609,6 +640,8 @@ dialog#palette[open] { animation: pop 160ms var(--ease-out); }
   .skill-groups { grid-template-columns: 1fr; gap: 32px; }
 }
 @media (max-width: 640px) {
+  .edu { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+  .edu-logo { width: 104px; height: 104px; padding: 14px; }
   .role { grid-template-columns: 1fr; gap: 0; padding-left: 32px; }
   .when { padding: 0 0 8px; }
   .role::after { top: 4px; left: 0; margin-left: 0; }
