@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muhammad Zohaib | Laravel and PHP Developer</title>
-  <meta name="description" content="Portfolio of Muhammad Zohaib, a software developer who builds Laravel and PHP web applications.">
+  <meta name="description" content="Portfolio of Muhammad Zohaib, a software developer who builds Laravel and PHP web applications. Browse the real code behind each project.">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0d0e10">
   <meta property="og:title" content="Muhammad Zohaib | Laravel and PHP Developer">
-  <meta property="og:description" content="Portfolio of Muhammad Zohaib, a software developer who builds Laravel and PHP web applications.">
+  <meta property="og:description" content="Laravel and PHP projects with the real code behind each one.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0e10'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='700' text-anchor='middle' fill='%23f2724b'%3EMZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,113 +20,183 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="Muhammad Zohaib, back to top">
-      <span class="brand-full">Muhammad Zohaib</span><span class="brand-short" aria-hidden="true">MZ</span>
-    </a>
-    <nav aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <h1>
-        <span class="line"><span class="line-inner" style="--i:0">Muhammad Zohaib</span></span>
-        <span class="line sub"><span class="line-inner" style="--i:1">builds Laravel and PHP web applications.</span></span>
-      </h1>
-      <p class="lead reveal" style="--d:300ms">Software developer focused on clean, maintainable code and interfaces that are simple to use.</p>
-      <div class="actions reveal" style="--d:400ms">
-        <a class="btn primary" href="#work">View projects</a>
-        <a class="btn" href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub profile</a>
-      </div>
-    </section>
-
-    <section id="work">
-      <h2 class="reveal">Selected work</h2>
-      <div class="bento">
-        <article class="project big reveal">
-          <div class="tile" aria-hidden="true"><span>Import</span></div>
-          <div class="project-body">
-            <h3>import-excel</h3>
-            <p>A Laravel application that accepts an Excel upload and stores every row in MySQL. The schema handles files with any number of columns and rows, using separate models for the file, its columns and its data.</p>
-            <ul class="meta">
-              <li>Laravel</li><li>PHP</li><li>MySQL</li><li>Laravel Excel</li><li>September 2022</li>
-            </ul>
-            <a class="link" href="https://github.com/mzohaib79/import-excel" target="_blank" rel="noopener">View source on GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project reveal" style="--d:80ms">
-          <div class="tile" aria-hidden="true"><span>Events</span></div>
-          <div class="project-body">
-            <h3>propay-tech-test</h3>
-            <p>A Laravel 11 application with authentication, user management and user interests. A new user fires an event, and a listener sends them an email notification.</p>
-            <ul class="meta">
-              <li>Laravel 11</li><li>PHP 8.2</li><li>April 2024</li>
-            </ul>
-            <a class="link" href="https://github.com/mzohaib79/propay-tech-test" target="_blank" rel="noopener">View source on GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="project reveal" style="--d:160ms">
-          <div class="tile" aria-hidden="true"><span>Auth</span></div>
-          <div class="project-body">
-            <h3>stage-two-screening</h3>
-            <p>A Laravel application with registration, login, password reset and email verification, with user logic kept in a dedicated service class.</p>
-            <ul class="meta">
-              <li>Laravel</li><li>PHP</li><li>October 2022</li>
-            </ul>
-            <a class="link" href="https://github.com/mzohaib79/stage-two-screening" target="_blank" rel="noopener">View source on GitHub <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="about">
-        <h2 class="reveal">About</h2>
-        <div>
-          <!-- TODO: replace this paragraph with your LinkedIn "About" text -->
-          <p class="body reveal">I build web applications with Laravel and PHP. My public work covers file import pipelines, authentication flows and event-driven notifications, written with a focus on clear structure and code that is easy to change later.</p>
-          <dl class="facts reveal" style="--d:100ms">
-            <div><dt>Role</dt><dd>Software developer</dd></div>
-            <div><dt>Stack</dt><dd>Laravel, PHP, MySQL, JavaScript</dd></div>
-            <div><dt>Profiles</dt><dd><a href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub</a></dd></div>
-          </dl>
+  <div class="shell">
+    <aside class="rail">
+      <a class="mark" href="#top" aria-label="Muhammad Zohaib, back to top">MZ</a>
+      <nav aria-label="Primary">
+        <a href="#work"><span class="tick" aria-hidden="true"></span>Work</a>
+        <a href="#patterns"><span class="tick" aria-hidden="true"></span>Patterns</a>
+        <a href="#about"><span class="tick" aria-hidden="true"></span>About</a>
+        <a href="#skills"><span class="tick" aria-hidden="true"></span>Skills</a>
+        <a href="#contact"><span class="tick" aria-hidden="true"></span>Contact</a>
+      </nav>
+      <div class="rail-foot">
+        <button class="palette-open" type="button" aria-haspopup="dialog">Jump to <kbd>/</kbd></button>
+        <div class="rail-links">
+          <a href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <section id="skills">
-      <h2 class="reveal">Skills</h2>
-      <!-- TODO: add or remove skills to match your LinkedIn profile -->
-      <ul class="skills">
-        <li class="reveal" style="--d:0ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg" alt="" width="40" height="40" loading="lazy"><span>PHP</span></li>
-        <li class="reveal" style="--d:50ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/laravel/laravel-original.svg" alt="" width="40" height="40" loading="lazy"><span>Laravel</span></li>
-        <li class="reveal" style="--d:100ms"><img class="lift" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="40" height="40" loading="lazy"><span>MySQL</span></li>
-        <li class="reveal" style="--d:150ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li>
-        <li class="reveal" style="--d:200ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="40" height="40" loading="lazy"><span>Git</span></li>
-        <li class="reveal" style="--d:250ms"><img class="invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="40" height="40" loading="lazy"><span>GitHub</span></li>
-      </ul>
-    </section>
+    <main id="main">
+      <section class="hero" id="top">
+        <h1>
+          <span class="line"><span class="line-inner" style="--i:0">Muhammad Zohaib</span></span>
+          <span class="line sub"><span class="line-inner" style="--i:1">builds Laravel and PHP web applications.</span></span>
+        </h1>
+        <p class="lead reveal" style="--d:300ms">Software developer focused on clean, maintainable code and interfaces that are simple to use.</p>
+        <div class="actions reveal" style="--d:400ms">
+          <a class="btn primary" href="#work">View projects</a>
+          <a class="btn" href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub profile</a>
+        </div>
+        <dl class="stats reveal" style="--d:500ms">
+          <div><dt>First public project</dt><dd>2022</dd></div>
+          <div><dt>Laravel projects on GitHub</dt><dd>3</dd></div>
+          <div><dt>Latest stack</dt><dd>Laravel 11, PHP 8.2</dd></div>
+        </dl>
+      </section>
 
-    <!-- TODO: add an Experience section once LinkedIn details are available -->
+      <section id="work">
+        <h2 class="reveal">Work, with the code to back it up</h2>
+        <p class="body reveal" style="--d:60ms">Every project links to the files that matter. Open them and judge the code yourself.</p>
 
-    <section id="contact">
-      <h2 class="reveal">Have a role or project in mind?</h2>
-      <p class="body reveal" style="--d:80ms">The quickest way to reach me is a message on LinkedIn.</p>
-      <a class="big-link reveal" style="--d:160ms" href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">Message me on LinkedIn <span aria-hidden="true">↗</span></a>
-    </section>
-  </main>
+        <article class="project reveal">
+          <div class="project-main">
+            <p class="year">September 2022</p>
+            <h3>import-excel</h3>
+            <p>A Laravel application that accepts an Excel upload and stores every row in MySQL. The schema handles files with any number of columns and rows, using separate models for the file, its columns and its data.</p>
+            <ul class="meta"><li>Laravel</li><li>PHP</li><li>MySQL</li><li>Laravel Excel</li></ul>
+            <a class="link" href="https://github.com/mzohaib79/import-excel" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="tree" role="group" aria-label="Key files in import-excel">
+            <p class="tree-title">import-excel</p>
+            <ul>
+              <li><span class="dir">app/Http/Controllers/Excel/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/app/Http/Controllers/Excel/ExcelFileController.php" target="_blank" rel="noopener">ExcelFileController.php</a></li>
+              <li><span class="dir">app/Models/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/app/Models/File.php" target="_blank" rel="noopener">File.php</a></li>
+              <li><span class="dir">app/Models/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/app/Models/FileColumn.php" target="_blank" rel="noopener">FileColumn.php</a></li>
+              <li><span class="dir">app/Models/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/app/Models/FileData.php" target="_blank" rel="noopener">FileData.php</a></li>
+              <li><span class="dir">database/migrations/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/database/migrations/2022_01_26_091517_create_file_datas_table.php" target="_blank" rel="noopener">create_file_datas_table.php</a></li>
+              <li><span class="dir">resources/views/</span><a href="https://github.com/mzohaib79/import-excel/blob/HEAD/resources/views/importexcel.blade.php" target="_blank" rel="noopener">importexcel.blade.php</a></li>
+            </ul>
+          </div>
+        </article>
 
-  <footer>
-    <p>© <span id="year">2026</span> Muhammad Zohaib</p>
-    <a href="https://github.com/mzohaib79" target="_blank" rel="noopener">github.com/mzohaib79</a>
-  </footer>
+        <article class="project reveal">
+          <div class="project-main">
+            <p class="year">April 2024</p>
+            <h3>propay-tech-test</h3>
+            <p>A Laravel 11 application with authentication, user management and user interests. It uses a repository layer behind service classes, and creating a user fires an event that sends them an email.</p>
+            <ul class="meta"><li>Laravel 11</li><li>PHP 8.2</li><li>Repository pattern</li><li>Events</li></ul>
+            <a class="link" href="https://github.com/mzohaib79/propay-tech-test" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="tree" role="group" aria-label="Key files in propay-tech-test">
+            <p class="tree-title">propay-tech-test</p>
+            <ul>
+              <li><span class="dir">app/Events/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Events/NewUserCreated.php" target="_blank" rel="noopener">NewUserCreated.php</a></li>
+              <li><span class="dir">app/Listeners/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Listeners/NotifyUser.php" target="_blank" rel="noopener">NotifyUser.php</a></li>
+              <li><span class="dir">app/Services/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Services/UserService.php" target="_blank" rel="noopener">UserService.php</a></li>
+              <li><span class="dir">app/Repositories/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Repositories/UserRepositoryInterface.php" target="_blank" rel="noopener">UserRepositoryInterface.php</a></li>
+              <li><span class="dir">app/Repositories/Eloquent/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Repositories/Eloquent/UserRepository.php" target="_blank" rel="noopener">UserRepository.php</a></li>
+              <li><span class="dir">app/Http/Controllers/</span><a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Http/Controllers/UserController.php" target="_blank" rel="noopener">UserController.php</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-main">
+            <p class="year">October 2022</p>
+            <h3>stage-two-screening</h3>
+            <p>A Laravel application with registration, login, password reset and email verification, with user logic kept in a dedicated service class.</p>
+            <ul class="meta"><li>Laravel</li><li>PHP</li><li>Authentication</li></ul>
+            <a class="link" href="https://github.com/mzohaib79/stage-two-screening" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="tree" role="group" aria-label="Key files in stage-two-screening">
+            <p class="tree-title">stage-two-screening</p>
+            <ul>
+              <li><span class="dir">app/Http/Controllers/</span><a href="https://github.com/mzohaib79/stage-two-screening/blob/HEAD/app/Http/Controllers/UserController.php" target="_blank" rel="noopener">UserController.php</a></li>
+              <li><span class="dir">app/Services/</span><a href="https://github.com/mzohaib79/stage-two-screening/blob/HEAD/app/Services/UserService.php" target="_blank" rel="noopener">UserService.php</a></li>
+              <li><span class="dir">app/Http/Controllers/Auth/</span><a href="https://github.com/mzohaib79/stage-two-screening/blob/HEAD/app/Http/Controllers/Auth/RegisteredUserController.php" target="_blank" rel="noopener">RegisteredUserController.php</a></li>
+              <li><span class="dir">app/Http/Controllers/Auth/</span><a href="https://github.com/mzohaib79/stage-two-screening/blob/HEAD/app/Http/Controllers/Auth/AuthenticatedSessionController.php" target="_blank" rel="noopener">AuthenticatedSessionController.php</a></li>
+              <li><span class="dir">resources/views/auth/</span><a href="https://github.com/mzohaib79/stage-two-screening/blob/HEAD/resources/views/auth/login.blade.php" target="_blank" rel="noopener">login.blade.php</a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="patterns">
+        <h2 class="reveal">Patterns you will find in my code</h2>
+        <dl class="patterns">
+          <div class="reveal">
+            <dt>Service and repository layers</dt>
+            <dd>Controllers call services, and services depend on repository interfaces. A service provider binds the Eloquent implementations. See <a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Services/UserService.php" target="_blank" rel="noopener">UserService</a>, <a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Repositories/UserRepositoryInterface.php" target="_blank" rel="noopener">UserRepositoryInterface</a> and <a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Providers/RepositoryServiceProvider.php" target="_blank" rel="noopener">RepositoryServiceProvider</a>.</dd>
+          </div>
+          <div class="reveal">
+            <dt>Events and listeners</dt>
+            <dd>Side effects such as notifications are decoupled from the request. <a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Events/NewUserCreated.php" target="_blank" rel="noopener">NewUserCreated</a> triggers <a href="https://github.com/mzohaib79/propay-tech-test/blob/HEAD/app/Listeners/NotifyUser.php" target="_blank" rel="noopener">NotifyUser</a>.</dd>
+          </div>
+          <div class="reveal">
+            <dt>Migrations and seeders</dt>
+            <dd>The database schema is versioned in code and reproducible, for example the <a href="https://github.com/mzohaib79/import-excel/tree/HEAD/database/migrations" target="_blank" rel="noopener">file, column and data tables</a> behind the Excel importer.</dd>
+          </div>
+          <div class="reveal">
+            <dt>Authentication flows</dt>
+            <dd>Registration, login, password reset and email verification, as in <a href="https://github.com/mzohaib79/stage-two-screening/tree/HEAD/app/Http/Controllers/Auth" target="_blank" rel="noopener">stage-two-screening</a>.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="about">
+        <div class="about">
+          <h2 class="reveal">About</h2>
+          <div>
+            <!-- TODO: replace this paragraph with your LinkedIn "About" text -->
+            <p class="body reveal">I build web applications with Laravel and PHP. My public work covers file import pipelines, authentication flows and event-driven notifications, written with a focus on clear structure and code that is easy to change later.</p>
+            <dl class="facts reveal" style="--d:100ms">
+              <div><dt>Role</dt><dd>Software developer</dd></div>
+              <div><dt>Stack</dt><dd>Laravel, PHP, MySQL, JavaScript</dd></div>
+              <div><dt>Profiles</dt><dd><a href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://github.com/mzohaib79" target="_blank" rel="noopener">GitHub</a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="reveal">Skills</h2>
+        <!-- TODO: add or remove skills to match your LinkedIn profile -->
+        <ul class="skills">
+          <li class="reveal" style="--d:0ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg" alt="" width="40" height="40" loading="lazy"><span>PHP</span></li>
+          <li class="reveal" style="--d:50ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/laravel/laravel-original.svg" alt="" width="40" height="40" loading="lazy"><span>Laravel</span></li>
+          <li class="reveal" style="--d:100ms"><img class="lift" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="40" height="40" loading="lazy"><span>MySQL</span></li>
+          <li class="reveal" style="--d:150ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li>
+          <li class="reveal" style="--d:200ms"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="40" height="40" loading="lazy"><span>Git</span></li>
+          <li class="reveal" style="--d:250ms"><img class="invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="40" height="40" loading="lazy"><span>GitHub</span></li>
+        </ul>
+      </section>
+
+      <!-- TODO: add an Experience section and an Education section once LinkedIn details are available -->
+
+      <section id="contact">
+        <h2 class="reveal">Have a role or project in mind?</h2>
+        <p class="body reveal" style="--d:80ms">The quickest way to reach me is a message on LinkedIn.</p>
+        <a class="big-link reveal" style="--d:160ms" href="https://www.linkedin.com/in/m-zohaib-tech" target="_blank" rel="noopener">Message me on LinkedIn <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <footer>
+        <p>© <span id="year">2026</span> Muhammad Zohaib</p>
+        <a href="https://github.com/mzohaib79" target="_blank" rel="noopener">github.com/mzohaib79</a>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="palette" aria-label="Jump to a section or link">
+    <div class="palette-box">
+      <input id="palette-input" type="text" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" placeholder="Jump to a section or link" autocomplete="off" spellcheck="false">
+      <ul id="palette-list" role="listbox" aria-label="Results"></ul>
+      <p class="palette-empty" hidden>No matches</p>
+    </div>
+  </dialog>
+
   <script src="script.js"></script>
 </body>
 </html>
